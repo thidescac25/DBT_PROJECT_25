@@ -2,14 +2,23 @@ version: 2
 
 models:
   - name: stg_orders
+    description: Orders data with basic cleaning and transformations applied.
     columns:
       - name: order_id
+        description: The unique identifier for each order.
         tests:
           - not_null
           - unique
       - name: customer_id
+        description: The ID of the customer who placed the order.
         tests:
           - not_null
           - relationships:
               to: ref('stg_customers')
               field: customer_id
+      - name: ordered_at
+        description: The timestamp when the order was placed.
+        tests:
+          - not_null
+      - name: store_id
+        description: The unique identifier for the store where the order was placed.
