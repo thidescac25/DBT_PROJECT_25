@@ -1,0 +1,10 @@
+
+target/
+dbt_packages/
+logs/
+
+# Exclure profiles.yml
+~/.dbt/profiles.yml
+
+# Exclure le script setup_database.py
+setup_database.py
