@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: DBT_PROJECT_25
+    schema: DBT_PROJECT_25
+
+    tables:
+      - name: raw_customers
+      - name: raw_orders
